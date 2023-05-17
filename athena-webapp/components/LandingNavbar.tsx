@@ -36,7 +36,7 @@ function NavList() {
   );
 }
  
-export default function NavBar() {
+export default function LandingNavBar() {
   const [openNav, setOpenNav] = useState(false);
  
   const handleWindowResize = () =>
