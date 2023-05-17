@@ -8,3 +8,47 @@ datasource db {
   url = env("DATABASE_URL")
   relationMode = "prisma"
 }
+
+model User{
+
+  userId Int @id @default(autoincrement()) @unique
+  firstName String
+  lastName String
+  email String @unique
+  gradYear Int
+  yourMenteeId Mentee?
+  yourMentorId Mentor? 
+  linkinedinUrl String @unique
+  instagramUrl String @unique
+  githubUrl String
+}
+
+model Mentor{
+mentorId Int @id @default(autoincrement())
+user User @relation(fields: [mentorId], references: [userId])
+assignedMentees Mentee[]
+careerInterests String
+hobbies String
+skills String
+
+
+@@index([mentorId])
+}
+model Mentee {
+menteeId Int @id @default(autoincrement())
+user User @relation(fields: [menteeId], references: [userId])
+assignedMentorId Int
+assignedMentor Mentor @relation(fields: [assignedMentorId], references: [mentorId])
+careerInterests String
+hobbies String
+@@index([menteeId])
+}
+
+model Match{
+  matchId Int @id @default(autoincrement())
+  mentorId Int
+  mentor Mentor @relation(fields: [mentorId], references: [mentorId])
+  menteeId Int
+  mentee Mentee @relation(fields: [menteeId], references: [menteeId])
+  @@index([matchId])
+}
