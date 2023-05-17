@@ -24,9 +24,9 @@ model User{
 }
 
 model Mentor{
-mentorId Int @id @default(autoincrement())
+mentorId Int @id @default(autoincrement()) @unique
 user User @relation(fields: [mentorId], references: [userId])
-assignedMentees Mentee[]
+assignedMentees Match[]
 careerInterests String
 hobbies String
 skills String
@@ -35,20 +35,20 @@ skills String
 @@index([mentorId])
 }
 model Mentee {
-menteeId Int @id @default(autoincrement())
+menteeId Int @id @default(autoincrement()) @unique
 user User @relation(fields: [menteeId], references: [userId])
-assignedMentorId Int
-assignedMentor Mentor @relation(fields: [assignedMentorId], references: [mentorId])
+assignedMentor Match?
 careerInterests String
 hobbies String
 @@index([menteeId])
 }
 
 model Match{
-  matchId Int @id @default(autoincrement())
+  
   mentorId Int
   mentor Mentor @relation(fields: [mentorId], references: [mentorId])
-  menteeId Int
+  menteeId Int @unique
   mentee Mentee @relation(fields: [menteeId], references: [menteeId])
-  @@index([matchId])
+  @@index([mentorId,menteeId])
+  @@id([mentorId, menteeId])
 }
