@@ -35,7 +35,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="m-20 p-10 text-neutral-800 font-bold flex flex-row justify-center items-center">
+        <div className="m-10 py-20 text-neutral-800 font-bold flex flex-row justify-center items-center">
           <div className="text-2xl w-1/2">
             Comprehensive questionnaire to make the{" "}
             <span className="text-violet-500">BEST</span> match.

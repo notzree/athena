@@ -7,13 +7,15 @@ import Logo from "../public/dark.png";
 export default function LandingFooter() {
   return (
     <>
-      <div className="w-screen h-1/2 bg-violet-50 flex flex-col gap-5 p-20 ">
-        <Image width="200" height="200" src={Logo} alt="athena light logo" />
-        <div className="text-4xl text-neutral-800">
-          Sign up to get notified.
-        </div>
-        <div className="w-1/5">
-          <LoginButton />
+      <div className="w-screen bg-violet-50 p-20 ">
+        <div className="flex flex-col gap-5 mx-20">
+          <Image width="200" height="200" src={Logo} alt="athena light logo" />
+          <div className="text-4xl text-neutral-800">
+            Sign up to get notified.
+          </div>
+          <div className="w-1/5">
+            <LoginButton />
+          </div>
         </div>
       </div>
       <div className="mx-auto max-w-screen-xl bg-neutral-800 px-6 py-3">

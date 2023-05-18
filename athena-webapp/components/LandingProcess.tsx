@@ -20,7 +20,7 @@ export default function Example() {
       <Accordion
         open={openA1}
         onClick={() => handleOpen(setOpenA1, openA1)}
-        className="w-[63%] bg-violet-50 border-neutral-800 border-2 box-shadow p-6 px-10 rounded-lg mb-10"
+        className="w-[72%] bg-violet-50 border-neutral-800 border-2 box-shadow p-6 px-10 rounded-lg mb-10"
       >
         <AccordionHeader
           className={`border-b-0 transition-colors ${
@@ -37,7 +37,7 @@ export default function Example() {
       <Accordion
         open={openA2}
         onClick={() => handleOpen(setOpenA2, openA2)}
-        className="w-[63%] bg-violet-50 border-neutral-800 border-2 box-shadow p-6 px-10 rounded-lg mb-10"
+        className="w-[72%] bg-violet-50 border-neutral-800 border-2 box-shadow p-6 px-10 rounded-lg mb-10"
       >
         <AccordionHeader
           className={`border-b-0 transition-colors ${
@@ -54,7 +54,7 @@ export default function Example() {
       <Accordion
         open={openA3}
         onClick={() => handleOpen(setOpenA3, openA3)}
-        className="w-[63%] bg-violet-50 border-neutral-800 border-2 box-shadow p-6 px-10 rounded-lg mb-10"
+        className="w-[72%] bg-violet-50 border-neutral-800 border-2 box-shadow p-6 px-10 rounded-lg mb-10"
       >
         <AccordionHeader
           className={`border-b-0 transition-colors ${
