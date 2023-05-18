@@ -8,7 +8,7 @@ export default function LandingFooter() {
   return (
     <>
       <div className="w-screen bg-violet-50 p-20 ">
-        <div className="flex flex-col gap-5 mx-20">
+        <div className="flex flex-col gap-5 md:mx-20">
           <Image width="200" height="200" src={Logo} alt="athena light logo" />
           <div className="text-4xl text-neutral-800">
             Sign up to get notified.

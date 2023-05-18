@@ -21,7 +21,7 @@ export default function Home() {
               alt="athena light logo"
             />
             <div className="flex-col">
-              <div className="md:text-8xl text-6xl font-bold text-shadow">
+              <div className="md:text-8xl text-6xl pt-3 font-bold text-shadow">
                 Athena
               </div>
               <div className="md:text-xl text-lg py-4">
@@ -35,12 +35,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="m-10 py-20 text-neutral-800 font-bold flex flex-row justify-center items-center">
-          <div className="text-2xl w-1/2">
+        <div className="w-screen md:w-[80vw] md:m-10 md:py-20 p-14 text-neutral-800 font-bold flex md:flex-row flex-col justify-center items-center">
+          <div className="text-2xl md:w-1/2">
             Comprehensive questionnaire to make the{" "}
             <span className="text-violet-500">BEST</span> match.
           </div>
-          <div className="text-xl w-1/2 text-right">
+          <div className="text-xl md:w-1/2 md:text-right py-5">
             <ul>
               <li>this is a placeholder</li>
               <li>this is a placeholder</li>
