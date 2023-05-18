@@ -26,8 +26,9 @@ export default function RootLayout({
           <LandingNavBar/>
         </nav>
         {children}
-        </body>
         <LandingFooter/>
+        </body>
+        
     </html>
     </ClerkProvider>
   )

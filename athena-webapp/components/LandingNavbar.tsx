@@ -7,6 +7,9 @@ import {
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import Image from "next/image";
+import Logo from '../public/light.png';
+import Link from "next/link";
 
 function NavList() {
   return (
@@ -51,16 +54,9 @@ export default function LandingNavBar() {
   }, []);
  
   return (
-    <Navbar className="mx-auto max-w-screen-xl bg-neutral-800 px-6 py-3">
+    <Navbar className=" w-screen bg-neutral-800 px-6 py-3">
       <div className="flex items-center justify-between text-violet-50 px-5 py-5">
-        <Typography
-          as="a"
-          href="#"
-          variant="h6"
-          className="mr-4 cursor-pointer py-1.5"
-        >
-          Athena
-        </Typography>
+        <Link href="/"><Image width="70" height="70" src={Logo} alt = "athena light logo"/></Link>
         <div className="hidden md:block">
           <NavList/>
         </div>
