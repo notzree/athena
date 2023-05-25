@@ -4,7 +4,7 @@ import { Navbar, Typography, IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import Image from "next/image";
-import Logo from "../public/light.png";
+import Logo from "../public/light-logo.png";
 import Link from "next/link";
 
 function NavList() {
