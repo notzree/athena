@@ -1,14 +1,10 @@
-'use client'
+"use client";
 import React, { useEffect } from "react";
-import {
-  Navbar,
-  Typography,
-  IconButton,
-} from "@material-tailwind/react";
+import { Navbar, Typography, IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import Image from "next/image";
-import Logo from '../public/light.png';
+import Logo from "../../public/light.png";
 import Link from "next/link";
 
 function NavList() {
@@ -20,45 +16,53 @@ function NavList() {
         color="white"
         className="p-1 pr-6 text-violet-50 font-medium"
       >
-        <a href="#" className="flex items-center hover:text-violet-200 transition-colors">
+        <a
+          href="#"
+          className="flex items-center hover:text-violet-200 transition-colors"
+        >
           About Us
         </a>
       </Typography>
-      
+
       <Typography
         as="li"
         variant="small"
         color="white"
         className="p-1 md:pr-0 md:mb-0 pr-6 mb-6 text-violet-50 font-medium"
       >
-        <a href="#" className="flex items-center hover:text-violet-200 transition-colors">
+        <a
+          href="#"
+          className="flex items-center hover:text-violet-200 transition-colors"
+        >
           Login
         </a>
       </Typography>
     </ul>
   );
 }
- 
+
 export default function LandingNavBar() {
   const [openNav, setOpenNav] = useState(false);
- 
+
   const handleWindowResize = () =>
     window.innerWidth >= 960 && setOpenNav(false);
- 
+
   useEffect(() => {
     window.addEventListener("resize", handleWindowResize);
- 
+
     return () => {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, []);
- 
+
   return (
     <Navbar className=" w-screen bg-neutral-800 px-6 py-3">
       <div className="flex items-center justify-between text-violet-50 px-5 py-5">
-        <Link href="/"><Image width="70" height="70" src={Logo} alt = "athena light logo"/></Link>
+        <Link href="/">
+          <Image width="70" height="70" src={Logo} alt="athena light logo" />
+        </Link>
         <div className="hidden md:block">
-          <NavList/>
+          <NavList />
         </div>
         <IconButton
           variant="text"
@@ -73,10 +77,7 @@ export default function LandingNavBar() {
           )}
         </IconButton>
       </div>
-      {
-        openNav &&
-        <NavList/>
-      }
+      {openNav && <NavList />}
     </Navbar>
   );
 }
