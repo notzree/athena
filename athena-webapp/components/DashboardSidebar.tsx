@@ -16,7 +16,6 @@ import {
 import Image from "next/image";
 import Logo from "../public/light-logo.png";
 import LogoDark from "../public/dark.png";
-
 import Link from "next/link";
 import LogoutButton from "./LogoutButton";
 import { useEffect, useState } from "react";
@@ -113,11 +112,7 @@ export default function DashboardSidebar() {
       </Card>
       {deviceSize && (
         <div className="top-0 absolute w-screen bg-violet-50 px-6 py-3">
-          <div
-            className={`top-24 left-0 w-full bg-violet-50 px-5 text-neutral-800 fixed h-full overflow-hidden z-10 ease-in-out duration-300 ${
-              openSidebar ? "translate-x-full " : "translate-x-0"
-            }`}
-          >
+          <div className="flex items-center justify-between text-violet-50 px-5 py-5">
             <Link href="/">
               <Image
                 width="70"
@@ -138,7 +133,12 @@ export default function DashboardSidebar() {
                 <XMarkIcon className="h-6 w-6" strokeWidth={2} />
               )}
             </IconButton>
-
+          </div>
+          <div
+            className={`top-24 left-0 w-full bg-violet-50 px-5 text-neutral-800 fixed h-full overflow-hidden z-10 ease-in-out duration-300 ${
+              openSidebar ? "translate-x-full " : "translate-x-0"
+            }`}
+          >
             <SidebarList />
           </div>
         </div>
