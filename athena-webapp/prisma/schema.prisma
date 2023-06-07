@@ -28,6 +28,7 @@ model Mentor {
   hobbies         String?
   user            User    @relation(fields: [mentorId], references: [userId])
   assignedMentees Match[]
+  preferredNumberMentees Int?
 
   @@index([mentorId])
 }
